@@ -12,6 +12,7 @@
   </div>
   <ul class="issues-list">
     <li ng-repeat="issue in issues">
+      <span ng-show="issue.open">*</span>
       <a ng-click="selectIssue(issue)">{{ issue.title }}</a>
     </li>
   </ul>

@@ -9,6 +9,11 @@
             day = 1000*60*60*24,
             daysOld = ((today.getTime() - created.getTime())/day);
 
+        // flag issues that are open
+        if (issue.state == "open") {
+          issue.open = true;
+        }
+
         issue.recent = (daysOld < 2);
       };
 
