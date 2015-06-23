@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     del = require('del'),
     connect = require('gulp-connect'),
     jshint = require('gulp-jshint'),
+    jscs = require('gulp-jscs'),
     appFiles;
 
 appFiles = ['index.html',
@@ -24,6 +25,11 @@ gulp.task('jshint', function() {
              .pipe(jshint())
              .pipe(jshint.reporter('jshint-stylish'))
              .pipe(jshint.reporter('fail'));
+});
+
+gulp.task('jscs', function() {
+  return gulp.src('src/**/*.js')
+             .pipe(jscs());
 });
 
 gulp.task('watch', function() {
