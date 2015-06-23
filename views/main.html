@@ -3,7 +3,7 @@
 <div ng-show="!error">
   <div class="issue-details" ng-show="currentIssue">
     <span class="close" ng-click="closeIssue()">X</span>
-    <a ng-href="{{currentIssue.html_url}}">
+    <a ng-href="{{currentIssue.html_url}}" target="_blank">
       <img class="avatar" ng-src="{{currentIssue.user.avatar_url}}">
       <span class="title">#{{currentIssue.number}}: {{ currentIssue.title }}</span>
     </a>
