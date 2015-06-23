@@ -15,7 +15,7 @@ gulp.task('clean', function(cb) {
   del('build', cb);
 });
 
-gulp.task('build', ['clean'], function() {
+gulp.task('build', ['jshint', 'jscs', 'clean'], function() {
   return gulp.src(appFiles, {base: '.'})
              .pipe(gulp.dest('build'));
 });
