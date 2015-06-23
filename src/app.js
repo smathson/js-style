@@ -4,7 +4,7 @@
   angular.module('issues', []);
 
   angular.module('ngtestApp', ['ngRoute', 'issues'])
-    .config(function ($routeProvider) {
+    .config(function($routeProvider) {
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',

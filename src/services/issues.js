@@ -6,11 +6,11 @@
       var determineRecent = function(issue) {
         var today = new Date(),
             created = new Date(issue.created_at),
-            day = 1000*60*60*24,
-            daysOld = ((today.getTime() - created.getTime())/day);
+            day = 1000 * 60 * 60 * 24,
+            daysOld = ((today.getTime() - created.getTime()) / day);
 
         // flag issues that are open
-        if (issue.state === "open") {
+        if (issue.state === 'open') {
           issue.open = true;
         }
 
@@ -25,6 +25,7 @@
               angular.forEach(issues, function(issue) {
                 determineRecent(issue);
               });
+
               deferred.resolve(issues);
             })
             .error(function(error) {

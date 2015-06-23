@@ -2,11 +2,12 @@
   'use strict';
 
   angular.module('issues')
-    .controller('MainCtrl', function ($scope, issueService) {
+    .controller('MainCtrl', function($scope, issueService) {
       issueService.query().then(
         function(issues) {
           $scope.issues = issues;
         },
+
         function(error) {
           $scope.error = error;
         });
