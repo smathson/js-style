@@ -10,7 +10,7 @@
             daysOld = ((today.getTime() - created.getTime())/day);
 
         // flag issues that are open
-        if (issue.state == "open") {
+        if (issue.state === "open") {
           issue.open = true;
         }
 
