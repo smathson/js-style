@@ -1,0 +1,23 @@
+{
+  "name": "js-style",
+  "version": "0.1.0",
+  "authors": [
+    "Scott Mathson <smathson@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.4.1",
+    "angular-resource": "~1.4.1",
+    "angular": "~1.4.1",
+    "angular-route": "~1.4.1"
+  }
+}
