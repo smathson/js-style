@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     del = require('del'),
     connect = require('gulp-connect'),
+    jshint = require('gulp-jshint'),
     appFiles;
 
 appFiles = ['index.html',
@@ -16,6 +17,13 @@ gulp.task('clean', function(cb) {
 gulp.task('build', ['clean'], function() {
   return gulp.src(appFiles, {base: '.'})
              .pipe(gulp.dest('build'));
+});
+
+gulp.task('jshint', function() {
+  return gulp.src('src/**/*.js')
+             .pipe(jshint())
+             .pipe(jshint.reporter('jshint-stylish'))
+             .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('watch', function() {
